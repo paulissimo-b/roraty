@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roraty - 29.11.2021</title>
+    <link rel="stylesheet" href="./fontawesome-free-6.0.0-beta2-web/css/all.css">
+    <script src="https://kit.fontawesome.com/9773a0b441.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: Montserrat, sans-serif; 
+            overflow: hidden;         
+        }
+
+        -webkit-scrollbar {
+            display: none;
+        }
+
+        /* NAV */
+
+        nav {
+            position: fixed;
+            top: 0;
+            display: flex;
+            padding: 10px 0;
+            z-index: 2;
+        }
+        
+        .nav-open {
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            width: 40px;
+            height: 40px;
+            width: 20px;
+            color: rgb(200, 142, 255);
+        }
+
+        nav:hover > .nav-bar {
+            width: 260px;
+        }
+        
+        .nav-element {
+            position: absolute;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            left: -60px;
+            width: 40px;
+            height: 40px;
+            z-index: 0;
+            border-radius: 50%;
+            background-color: #fff;
+            transition: left .5s ease-in-out;
+        }
+
+        .nav-element-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            background-color: rgb(225, 0, 255);
+            border-radius: 50%;
+            clip-path: circle(0 at 40% 40%);
+            transition: clip-path .3s ease-in;
+        }
+        
+        .nav-element:hover .nav-element-bg {
+            clip-path: circle(110% at 0 30%);
+        }
+        
+        .nav-element:hover a {
+            color: #fff;
+        }
+        
+        .nav-element a {
+            padding: 10px 15px;
+        }
+        
+
+        nav:hover .nav-bar .nav-element-1 {
+            left: 35px;
+        }
+        
+        nav:hover .nav-bar .nav-element-2 {
+            left: 85px;
+        }
+
+        nav:hover .nav-bar .nav-element-3 {
+            left: 135px;
+        }
+        
+        nav:hover .nav-bar .nav-element-4 {
+            left: 185px;
+        }
+
+        nav:hover .nav-bar .nav-element-5 {
+            left: 235px;
+        }
+        
+        /* ALL SLIDES */
+
+        .slide {
+            height: 100vh;
+        }
+
+        /* HOME PAGE */
+
+        .one {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-image: linear-gradient(175deg,  rgb(163, 40, 211) , rgb(137, 46, 155) 80%, rgb(64, 0, 77) 80%);
+            color: #fff;
+        }
+
+        h1 {
+            font-weight: normal;
+            font-size: 6rem;
+        }
+
+        .date {
+            margin-top: 20px;
+            font-size: 3rem;
+        }
+
+        /* SLIDE TWO */
+
+        .two {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            background-image: radial-gradient(rgb(137, 46, 155) 40%, rgb(163, 40, 211) 40%);
+            overflow: hidden;
+        }
+        
+        .img-box {
+            perspective: 300px;
+        }
+
+        .two .img-box img {
+            width: 400px;
+            transform: rotateY(7deg);
+            border-radius: 10px;
+        }
+        
+
+        
+
+        /* FINAL QUESTION */
+
+        .five {
+            padding-top: 60px;
+            background-color: rgb(163, 40, 211);
+        }
+        
+        .question-box {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .question-box i {
+            position: absolute;
+            font-size: 50rem;
+            color: rgba(255,255,255,.5);
+            transform: rotate(-20deg) skew(20deg);
+        }
+
+        .question-box p {
+            position: absolute;
+            width: 65%;
+            left: 30%;
+            top: 20%;
+            font-size: 3rem;
+            color: #fff;
+        }
+        
+        
+
+        /* OTHERS */
+
+        .arrow {
+            position: absolute;
+            bottom: 20px;
+            font-size: 1.5rem;
+        }
+        
+        .arrow:hover {
+            animation: arrow-move 1s linear infinite;
+        }
+
+        .arrow a {
+            color: #fff;
+            padding: 20px 60px;
+        }
+
+        @keyframes arrow-move {
+            0% {
+                bottom:20px;
+            }
+
+            25% {
+                bottom: 25px;
+            }
+
+            50% {
+                bottom: 20px;
+            }
+
+            75% {
+                bottom: 15px;
+            }
+
+            100% {
+                bottom: 20px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+    
+    <nav>
+        <div class="nav-open">
+            <i class="fas fa-angle-double-right"></i>
+        </div>
+        <div class="nav-bar">
+            <div class="nav-element nav-element-1">
+                <div class="nav-element-bg"></div>
+                <a href="#one">1</a>
+            </div>
+            <div class="nav-element nav-element-2">
+                <div class="nav-element-bg"></div>
+                <a href="#two">2</a>
+            </div>
+            <div class="nav-element nav-element-3">
+                <div class="nav-element-bg"></div>
+                <a href="#three">3</a>
+            </div>
+            <div class="nav-element nav-element-4">
+                <div class="nav-element-bg"></div>
+                <a href="#four">4</a>
+            </div>
+            <div class="nav-element nav-element-5">
+                <div class="nav-element-bg"></div>
+                <a href="#five">5</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="slide one" id="one">
+        <h1>Roraty 2021</h1>
+        <p class="date">Poniedziałek 29.11.2021</p>
+        <div class="arrow"><a href="#two"><i class="fas fa-angle-double-down"></i></a></div>
+    </div>
+    
+    
+    <div class="slide two" id="two">
+        <div class="img-box">
+            <img src="./img/roraty-20211128-1.jpg" alt="Górski spływ kajakowy">
+        </div>
+    </div>
+    
+    
+    <div class="slide three" id="three"></div>
+    <div class="slide four" id="four"></div>
+    <div class="slide five" id="five">
+        <div class="question-box">
+            <i class="fas fa-question"></i>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae nobis quidem, quod, laborum temporibus labore sequi reiciendis repellendus expedita beatae, animi distinctio totam nostrum neque voluptas similique non incidunt odit.</p>
+        </div>
+    </div>
+</body>
+</html>
