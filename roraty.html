@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roraty - 29.11.2021</title>
     <link rel="stylesheet" href="./fontawesome-free-6.0.0-beta2-web/css/all.css">
-    <script src="https://kit.fontawesome.com/9773a0b441.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/9773a0b441.js" crossorigin="anonymous"></script> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
@@ -40,15 +40,21 @@
         .nav-open {
             display: flex;
             align-items: center;
-            padding: 0 10px;
+            padding: 0 2px;
             width: 40px;
             height: 40px;
             width: 20px;
-            color: rgb(200, 142, 255);
+            color: rgb(255, 255, 255);
+            font-size: 1.5rem;
+            transition: padding .2s linear;
         }
 
         nav:hover > .nav-bar {
             width: 260px;
+        }
+
+        nav:hover > .nav-open {
+            padding: 0 10px;
         }
         
         .nav-element {
@@ -115,6 +121,11 @@
 
         .slide {
             height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            background-color: rgb(163, 40, 211);
         }
 
         /* HOME PAGE */
@@ -144,7 +155,7 @@
             display: flex;
             align-items: center;
             justify-content: space-evenly;
-            background-image: radial-gradient(rgb(137, 46, 155) 40%, rgb(163, 40, 211) 40%);
+            background-image: radial-gradient(circle at 20% -30%, rgb(137, 46, 155) 70%, rgb(163, 40, 211) 70%);
             overflow: hidden;
         }
         
@@ -156,6 +167,7 @@
             width: 400px;
             transform: rotateY(7deg);
             border-radius: 10px;
+            box-shadow: -100px -80px 60px rgb(214, 78, 214);
         }
         
 
@@ -192,16 +204,27 @@
         
         
 
-        /* OTHERS */
+        /* ARROWS */
 
         .arrow {
             position: absolute;
-            bottom: 20px;
             font-size: 1.5rem;
         }
         
-        .arrow:hover {
-            animation: arrow-move 1s linear infinite;
+        .arrow-down {
+            bottom: 20px;
+        }
+        
+        .arrow-up {
+            top: 20px;    
+        }
+        
+        .arrow-down:hover {
+            animation: arrow-down-move 1s linear infinite;
+        }
+
+        .arrow-up:hover {
+            animation: arrow-up-move 1s linear infinite;
         }
 
         .arrow a {
@@ -209,7 +232,7 @@
             padding: 20px 60px;
         }
 
-        @keyframes arrow-move {
+        @keyframes arrow-down-move {
             0% {
                 bottom:20px;
             }
@@ -228,6 +251,28 @@
 
             100% {
                 bottom: 20px;
+            }
+        }
+
+        @keyframes arrow-up-move {
+            0% {
+                top:20px;
+            }
+
+            25% {
+                top: 15px;
+            }
+
+            50% {
+                top: 20px;
+            }
+
+            75% {
+                top: 25px;
+            }
+
+            100% {
+                top: 20px;
             }
         }
 
@@ -268,20 +313,29 @@
     <div class="slide one" id="one">
         <h1>Roraty 2021</h1>
         <p class="date">Poniedziałek 29.11.2021</p>
-        <div class="arrow"><a href="#two"><i class="fas fa-angle-double-down"></i></a></div>
+        <div class="arrow arrow-down"><a href="#two"><i class="fas fa-angle-double-down"></i></a></div>
     </div>
     
     
     <div class="slide two" id="two">
+        <div class="arrow arrow-up"><a href="#one"><i class="fas fa-angle-double-up"></i></a></div>
         <div class="img-box">
             <img src="./img/roraty-20211128-1.jpg" alt="Górski spływ kajakowy">
         </div>
+        <div class="arrow arrow-down"><a href="#three"><i class="fas fa-angle-double-down"></i></a></div>
     </div>
     
     
-    <div class="slide three" id="three"></div>
-    <div class="slide four" id="four"></div>
+    <div class="slide three" id="three">
+        <div class="arrow arrow-up"><a href="#two"><i class="fas fa-angle-double-up"></i></a></div>
+        <div class="arrow arrow-down"><a href="#four"><i class="fas fa-angle-double-down"></i></a></div>
+    </div>
+    <div class="slide four" id="four">
+        <div class="arrow arrow-up"><a href="#three"><i class="fas fa-angle-double-up"></i></a></div>
+        <div class="arrow arrow-down"><a href="#five"><i class="fas fa-angle-double-down"></i></a></div>
+    </div>
     <div class="slide five" id="five">
+        <div class="arrow arrow-up"><a href="#four"><i class="fas fa-angle-double-up"></i></a></div>
         <div class="question-box">
             <i class="fas fa-question"></i>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae nobis quidem, quod, laborum temporibus labore sequi reiciendis repellendus expedita beatae, animi distinctio totam nostrum neque voluptas similique non incidunt odit.</p>
