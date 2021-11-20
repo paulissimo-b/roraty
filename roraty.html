@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roraty - 29.11.2021</title>
     <link rel="stylesheet" href="./fontawesome-free-6.0.0-beta2-web/css/all.css">
-    <script src="https://kit.fontawesome.com/9773a0b441.js" crossorigin="anonymous"></script> 
+    <!-- <script src="https://kit.fontawesome.com/9773a0b441.js" crossorigin="anonymous"></script>  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
@@ -160,14 +160,42 @@
         }
         
         .img-box {
+            position: relative;
             perspective: 300px;
+        }
+        
+        .img-box p {
+            position: absolute;
+            width: 100%;
+            bottom: -40px;
+            font-weight: bold;
+            color: #fff;
+            text-align: center;
+            font-size: 2rem;
+            z-index: 1;
+        }
+
+        .img-box p::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 3px;
+            top: 0;
+            background-color: #fff;
         }
 
         .two .img-box img {
             width: 400px;
             transform: rotateY(7deg);
             border-radius: 10px;
-            box-shadow: -100px -80px 60px rgb(214, 78, 214);
+            box-shadow: -60px -80px 60px rgb(214, 78, 214);
+            /* z-index: 0; */
+        }
+
+        .description {
+            width: 60%;
+            color: #fff;
+            font-size: 3rem;
         }
         
         /* SLIDE THREE - VIDEO */
@@ -323,7 +351,12 @@
     <div class="slide two" id="two">
         <div class="arrow arrow-up"><a href="#one"><i class="fas fa-angle-double-up"></i></a></div>
         <div class="img-box">
-            <img src="./img/roraty-20211128-1.jpg" alt="Górski spływ kajakowy">
+            <img src="./img/roraty-20211128-1.jpg" alt="Górski spływ kajakowy" id="sportsman-img" style="filter: blur(20px)">
+            <p>Zofia Klepacka</p>
+        </div>
+        <div class="description">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolores provident quibusdam itaque nesciunt a vero at iste repellendus quaerat sint error, quae vel mollitia iure nam, ipsum nobis facere!
+            Alias, consectetur in itaque fuga quos iure debitis explicabo minus? Explicabo ducimus inventore voluptate ipsum velit optio error commodi architecto quis ad consequuntur laboriosam sed nihil, quam est at libero?</p>
         </div>
         <div class="arrow arrow-down"><a href="#three"><i class="fas fa-angle-double-down"></i></a></div>
     </div>
@@ -345,5 +378,7 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae nobis quidem, quod, laborum temporibus labore sequi reiciendis repellendus expedita beatae, animi distinctio totam nostrum neque voluptas similique non incidunt odit.</p>
         </div>
     </div>
+
+    <script src="./js/roraty.js"></script>
 </body>
 </html>
