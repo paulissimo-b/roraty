@@ -132,6 +132,7 @@
         /* HOME PAGE */
 
         .one {
+            position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -149,6 +150,28 @@
             margin-top: 20px;
             font-size: 3rem;
         }
+
+        
+        .candles {
+            margin-top: 50px;
+            position: relative;
+            display: flex;
+            justify-content: space-evenly;
+            height: 100px;
+            width: 20vw;
+        }
+        
+        .candles img {
+            filter: invert(100%) sepia(0%) saturate(7479%) hue-rotate(70deg) brightness(99%) contrast(107%);
+            opacity: .1;
+            height: 100%;
+        }
+
+        .candles img:nth-child(1) {
+            opacity: 1;
+        }
+
+
 
         /* SLIDE TWO */
 
@@ -168,20 +191,14 @@
             position: absolute;
             width: 100%;
             bottom: -40px;
+            transform: rotateY(7deg);
             font-weight: bold;
             color: #fff;
+            text-shadow: -5px -5px 5px rgb(201, 110, 189);
             text-align: center;
-            font-size: 2rem;
+            font-size: 0;
             z-index: 1;
-        }
-
-        .img-box p::before {
-            content: '';
-            display: block;
-            width: 100%;
-            height: 3px;
-            top: 0;
-            background-color: #fff;
+            transition: font-size 1.3s linear;
         }
 
         .two .img-box img {
@@ -189,7 +206,7 @@
             transform: rotateY(7deg);
             border-radius: 10px;
             box-shadow: -60px -80px 60px rgb(214, 78, 214);
-            /* z-index: 0; */
+            cursor: pointer;
         }
 
         .description {
@@ -203,6 +220,9 @@
         .three {
             align-items: center;
         }
+
+        /* SLIDE FOUR */
+
 
         /* FINAL QUESTION */
 
@@ -344,6 +364,14 @@
     <div class="slide one" id="one">
         <h1>Roraty 2021</h1>
         <p class="date">Poniedziałek 29.11.2021</p>
+
+        <div class="candles">
+            <img src="./img/candle.svg" alt="Świeca adwentowa">
+            <img src="./img/candle.svg" alt="Świeca adwentowa">
+            <img src="./img/candle.svg" alt="Świeca adwentowa">
+            <img src="./img/candle.svg" alt="Świeca adwentowa">
+        </div>
+
         <div class="arrow arrow-down"><a href="#two"><i class="fas fa-angle-double-down"></i></a></div>
     </div>
     
@@ -367,10 +395,15 @@
         <iframe width="560" height="315" src="https://www.youtube.com/embed/7oife5JdIFE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <div class="arrow arrow-down"><a href="#four"><i class="fas fa-angle-double-down"></i></a></div>
     </div>
+
+
     <div class="slide four" id="four">
         <div class="arrow arrow-up"><a href="#three"><i class="fas fa-angle-double-up"></i></a></div>
+
         <div class="arrow arrow-down"><a href="#five"><i class="fas fa-angle-double-down"></i></a></div>
     </div>
+    
+    
     <div class="slide five" id="five">
         <div class="arrow arrow-up"><a href="#four"><i class="fas fa-angle-double-up"></i></a></div>
         <div class="question-box">
