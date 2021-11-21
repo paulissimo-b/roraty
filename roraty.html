@@ -186,20 +186,6 @@
             position: relative;
             perspective: 300px;
         }
-        
-        .img-box p {
-            position: absolute;
-            width: 100%;
-            bottom: -40px;
-            transform: rotateY(7deg);
-            font-weight: bold;
-            color: #fff;
-            text-shadow: -5px -5px 5px rgb(201, 110, 189);
-            text-align: center;
-            font-size: 0;
-            z-index: 1;
-            transition: font-size 1.3s linear;
-        }
 
         .two .img-box img {
             width: 400px;
@@ -219,6 +205,11 @@
         
         .three {
             align-items: center;
+            background-image: linear-gradient(70deg, rgb(163, 40, 211) 40%,  rgb(137, 46, 155)40%,  rgb(163, 40, 211));
+        }
+
+        .three iframe {
+            border-radius: 10px;
         }
 
         /* SLIDE FOUR */
@@ -383,12 +374,11 @@
     <div class="slide two" id="two">
         <div class="arrow arrow-up"><a href="#one"><i class="fas fa-angle-double-up"></i></a></div>
         <div class="img-box">
-            <img src="./img/roraty-20211128-1.jpg" alt="Górski spływ kajakowy" id="sportsman-img" style="filter: blur(20px)">
-            <p>Zofia Klepacka</p>
+            <img src="./img/d-tomala.jpg" alt="Górski spływ kajakowy" id="sportsman-img" style="filter: blur(20px)">
         </div>
         <div class="description">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolores provident quibusdam itaque nesciunt a vero at iste repellendus quaerat sint error, quae vel mollitia iure nam, ipsum nobis facere!
-            Alias, consectetur in itaque fuga quos iure debitis explicabo minus? Explicabo ducimus inventore voluptate ipsum velit optio error commodi architecto quis ad consequuntur laboriosam sed nihil, quam est at libero?</p>
+            <h2>Iz 2, 1-5</h2>
+            <p>"Chodźcie, wstąpmy na Górę Pana, do świątyni Boga Jakuba! Niech nas nauczy dróg swoich, byśmy kroczyli Jego ścieżkami."</p>
         </div>
         <div class="arrow arrow-down"><a href="#three"><i class="fas fa-angle-double-down"></i></a></div>
     </div>
@@ -396,7 +386,7 @@
     
     <div class="slide three" id="three">
         <div class="arrow arrow-up"><a href="#two"><i class="fas fa-angle-double-up"></i></a></div>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/7oife5JdIFE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/rkOnmeh9L-U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <div class="arrow arrow-down"><a href="#four"><i class="fas fa-angle-double-down"></i></a></div>
     </div>
 
