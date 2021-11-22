@@ -176,6 +176,7 @@
         /* SLIDE TWO */
 
         .two {
+            position: relative;
             display: flex;
             align-items: center;
             justify-content: space-evenly;
@@ -200,7 +201,50 @@
             color: #fff;
             font-size: 3rem;
         }
+
+        .show-video {
+            position: absolute;
+            bottom: 5vh;
+            right: 5vw;
+            padding: 10px 20px;
+            font-size: 4rem;
+            cursor: pointer;
+            opacity: .2;
+            color: #fff;
+            border: 5px solid #fff;
+            border-radius: 10px;
+        }
+
+        .show-video:hover {
+            opacity: .9;
+        }
         
+        .video-box {
+            position: absolute;
+            width: 70%;
+            height: 0;
+            /* box-shadow: 0 0 600px 150px #000;  */
+        }
+
+        .video-box iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-box p {
+            display: none;
+            position: absolute;
+            top: 2%;
+            right: 2%;
+            cursor: pointer;
+            color: #fff;
+            font-size: 3rem;
+        }
+
+        .video-box p:hover {
+            color: rgb(64, 0, 77);
+        }
+
         /* SLIDE THREE - VIDEO */
         
         .three {
@@ -374,19 +418,23 @@
     <div class="slide two" id="two">
         <div class="arrow arrow-up"><a href="#one"><i class="fas fa-angle-double-up"></i></a></div>
         <div class="img-box">
-            <img src="./img/d-tomala.jpg" alt="Górski spływ kajakowy" id="sportsman-img" style="filter: blur(20px)">
+            <img src="./img/d-tomala_small.jpg" alt="Dawid Tomala" id="sportsman-img" style="filter: blur(20px)">
         </div>
         <div class="description">
             <h2>Iz 2, 1-5</h2>
             <p>"Chodźcie, wstąpmy na Górę Pana, do świątyni Boga Jakuba! Niech nas nauczy dróg swoich, byśmy kroczyli Jego ścieżkami."</p>
         </div>
+        <div class="video-box">
+            <iframe src="https://www.youtube.com/embed/rkOnmeh9L-U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p><i class="far fa-window-close"></i></p>
+        </div>
+        <p class="show-video"><i class="fas fa-film"></i></p>
         <div class="arrow arrow-down"><a href="#three"><i class="fas fa-angle-double-down"></i></a></div>
     </div>
     
     
     <div class="slide three" id="three">
         <div class="arrow arrow-up"><a href="#two"><i class="fas fa-angle-double-up"></i></a></div>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/rkOnmeh9L-U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <div class="arrow arrow-down"><a href="#four"><i class="fas fa-angle-double-down"></i></a></div>
     </div>
 
