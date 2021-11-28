@@ -26,6 +26,7 @@ let songX = document.querySelector('.song-X');
 let lyrics = document.querySelector('#lyrics p');
 let stanza1 = document.querySelector('.stanza-1');
 let stanza2 = document.querySelector('.stanza-2');
+let stanza3 = document.querySelector('.stanza-3');
 let song2_1 = document.querySelector('#s2-1');
 let song2_2 = document.querySelector('#s2-2');
 let song2_r = document.querySelector('#s2-r');
@@ -34,11 +35,13 @@ let song5_r = document.querySelector('#s5-r');
 
 
 function showCall1() {
-    call1.setAttribute('style', 'width: auto; transition: width .3s ease-out;');
+    call1.setAttribute('style', 'width: auto;');
+    firstLetter1.setAttribute('style', 'cursor: auto');
 }
 
 function showDesc1() {
-    desc1.setAttribute('style','width: auto; transition: width .3s ease-out;');
+    desc1.setAttribute('style','width: auto;');
+    call1.setAttribute('style', 'width: auto; cursor: auto;');
 }
 
 firstLetter1.addEventListener('click', showCall1);
@@ -46,11 +49,13 @@ call1.addEventListener('click', showDesc1);
 
 
 function showCall2() {
-    call2.setAttribute('style', 'width: auto; transition: width .3s ease-out;');
+    call2.setAttribute('style', 'width: auto;');
+    firstLetter2.setAttribute('style', 'cursor: auto;');
 }
 
 function showDesc2() {
-    desc2.setAttribute('style','width: auto; transition: width .3s ease-out;');
+    desc2.setAttribute('style', 'width: auto;');
+    call2.setAttribute('style', 'width: auto; cursor: auto;');
 }
 
 firstLetter2.addEventListener('click', showCall2);
@@ -58,11 +63,13 @@ call2.addEventListener('click', showDesc2);
 
 
 function showCall3() {
-    call3.setAttribute('style', 'width: auto; transition: width .3s ease-out;');
+    call3.setAttribute('style', 'width: auto;');
+    firstLetter3.setAttribute('style', 'cursor: auto;');
 }
 
 function showDesc3() {
-    desc3.setAttribute('style','width: auto; transition: width .3s ease-out;');
+    desc3.setAttribute('style', 'width: auto;');
+    call3.setAttribute('style', 'width: auto; cursor: auto;');
 }
 
 firstLetter3.addEventListener('click', showCall3);
@@ -102,6 +109,14 @@ function showStanza2() {
 
 function hideStanza2() {
     stanza2.setAttribute('style', 'display: none');
+}
+
+function showStanza3() {
+    stanza3.setAttribute('style', 'display: flex');
+}
+
+function hideStanza3() {
+    stanza3.setAttribute('style', 'display: none');
 }
 
 
@@ -144,10 +159,12 @@ function writeBlank() {
 
 song1.addEventListener('click', hideStanza1);
 song1.addEventListener('click', hideStanza2);
+song1.addEventListener('click', showStanza3);
 song1.addEventListener('click', write_1);
 
 song2.addEventListener('click', showStanza1);
 song2.addEventListener('click', hideStanza2);
+song2.addEventListener('click', hideStanza3);
 song2.addEventListener('click', write_2_1);
 song2_1.addEventListener('click', write_2_1);
 song2_2.addEventListener('click', write_2_2);
@@ -155,18 +172,22 @@ song2_r.addEventListener('click', write_2_r);
 
 song3.addEventListener('click', hideStanza1);
 song3.addEventListener('click', hideStanza2);
+song3.addEventListener('click', hideStanza3);
 song3.addEventListener('click', write_3);
 
 song4.addEventListener('click', hideStanza1);
 song4.addEventListener('click', hideStanza2);
+song4.addEventListener('click', hideStanza3);
 song4.addEventListener('click', write_4);
 
 song5.addEventListener('click', hideStanza1);
 song5.addEventListener('click', showStanza2);
+song5.addEventListener('click', hideStanza3);
 song5.addEventListener('click', write_5_1);
 song5_1.addEventListener('click', write_5_1);
 song5_r.addEventListener('click', write_5_r);
 
 songX.addEventListener('click', hideStanza1);
 songX.addEventListener('click', hideStanza2);
+songX.addEventListener('click', hideStanza3);
 songX.addEventListener('click', writeBlank);
