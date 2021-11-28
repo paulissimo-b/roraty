@@ -8,6 +8,7 @@ let song2 = document.querySelector('.song-2');
 let song3 = document.querySelector('.song-3');
 let song4 = document.querySelector('.song-4');
 let song5 = document.querySelector('.song-5');
+let songX = document.querySelector('.song-X');
 
 
 let lyrics = document.querySelector('#lyrics p');
@@ -87,6 +88,10 @@ function write_5_r() {
     lyrics.innerHTML = 'Ref.: Od drzwi, do drzwi<br>stuka, puka<br>i schronienia szuka.<br>Czy wiesz kto,<br>przyszedł tu?<br>Otwórz, otwórz, otwórz mu!';
 }
 
+function writeBlank() {
+    lyrics.innerHTML = '';
+}
+
 song1.addEventListener('click', hideStanza1);
 song1.addEventListener('click', hideStanza2);
 song1.addEventListener('click', write_1);
@@ -111,3 +116,7 @@ song5.addEventListener('click', showStanza2);
 song5.addEventListener('click', write_5_1);
 song5_1.addEventListener('click', write_5_1);
 song5_r.addEventListener('click', write_5_r);
+
+songX.addEventListener('click', hideStanza1);
+songX.addEventListener('click', hideStanza2);
+songX.addEventListener('click', writeBlank);
