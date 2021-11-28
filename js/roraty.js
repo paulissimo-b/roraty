@@ -3,6 +3,18 @@ let showVideo = document.querySelector('.show-video');
 let closeVideo = document.querySelector('.video-box p');
 let videoBox = document.querySelector('.video-box');
 
+let firstLetter1 = document.querySelector('.slogan-1 .first-letter');
+let call1 = document.querySelector('.slogan-1 .call');
+let desc1 = document.querySelector('.slogan-1 .description');
+
+let firstLetter2 = document.querySelector('.slogan-2 .first-letter');
+let call2 = document.querySelector('.slogan-2 .call');
+let desc2 = document.querySelector('.slogan-2 .description');
+
+let firstLetter3 = document.querySelector('.slogan-3 .first-letter');
+let call3 = document.querySelector('.slogan-3 .call');
+let desc3 = document.querySelector('.slogan-3 .description');
+
 let song1 = document.querySelector('.song-1');
 let song2 = document.querySelector('.song-2');
 let song3 = document.querySelector('.song-3');
@@ -19,6 +31,44 @@ let song2_2 = document.querySelector('#s2-2');
 let song2_r = document.querySelector('#s2-r');
 let song5_1 = document.querySelector('#s5-1');
 let song5_r = document.querySelector('#s5-r');
+
+
+function showCall1() {
+    call1.setAttribute('style', 'width: auto; transition: width .3s ease-out;');
+}
+
+function showDesc1() {
+    desc1.setAttribute('style','width: auto; transition: width .3s ease-out;');
+}
+
+firstLetter1.addEventListener('click', showCall1);
+call1.addEventListener('click', showDesc1);
+
+
+function showCall2() {
+    call2.setAttribute('style', 'width: auto; transition: width .3s ease-out;');
+}
+
+function showDesc2() {
+    desc2.setAttribute('style','width: auto; transition: width .3s ease-out;');
+}
+
+firstLetter2.addEventListener('click', showCall2);
+call2.addEventListener('click', showDesc2);
+
+
+function showCall3() {
+    call3.setAttribute('style', 'width: auto; transition: width .3s ease-out;');
+}
+
+function showDesc3() {
+    desc3.setAttribute('style','width: auto; transition: width .3s ease-out;');
+}
+
+firstLetter3.addEventListener('click', showCall3);
+call3.addEventListener('click', showDesc3);
+
+
 
 function setAttr() {
     img.setAttribute('style', 'transition: filter 1s linear; filter: blur(0); cursor: default;');
@@ -85,7 +135,7 @@ function write_5_1() {
 }
 
 function write_5_r() {
-    lyrics.innerHTML = 'Ref.: Od drzwi, do drzwi<br>stuka, puka<br>i schronienia szuka.<br>Czy wiesz kto,<br>przyszedł tu?<br>Otwórz, otwórz, otwórz mu!';
+    lyrics.innerHTML = 'Ref. Od drzwi, do drzwi<br>stuka, puka<br>i schronienia szuka.<br>Czy wiesz kto,<br>przyszedł tu?<br>Otwórz, otwórz, otwórz mu!';
 }
 
 function writeBlank() {

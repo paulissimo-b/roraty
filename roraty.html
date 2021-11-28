@@ -100,21 +100,25 @@
         nav:hover .nav-bar .nav-element-1 {
             left: 35px;
         }
+
+        nav:hover .nav-bar .nav-element-1a {
+            left: 85px;
+        }
         
         nav:hover .nav-bar .nav-element-2 {
-            left: 85px;
+            left: 135px;
         }
 
         nav:hover .nav-bar .nav-element-3 {
-            left: 135px;
+            left: 185px;
         }
         
         nav:hover .nav-bar .nav-element-4 {
-            left: 185px;
+            left: 235px;
         }
 
         nav:hover .nav-bar .nav-element-5 {
-            left: 235px;
+            left: 285px;
         }
         
         /* ALL SLIDES */
@@ -177,6 +181,48 @@
 
         .candles img:nth-child(1) {
             opacity: 1;
+        }
+
+        /* SLIDE ONE-A */
+
+        .one-a {
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .slogan {
+            display: flex;
+            align-items: center;
+            font-size: 5rem;
+            margin-bottom: 10vh;
+        }
+
+        .first-letter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(64, 0, 77);
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .call {
+            background-color: rgb(64, 0, 77);
+            color: #fff;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+            transition: width .3s ease-out;
+            cursor: pointer;
+        }
+
+        .description {
+            background-color: #fff;
+            color: rgb(64, 0, 77);
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+            transition: width .3s ease-out;
         }
 
           /* SLIDE TWO */
@@ -490,6 +536,10 @@
                 <div class="nav-element-bg"></div>
                 <a href="#one">1</a>
             </div>
+            <div class="nav-element nav-element-1a">
+                <div class="nav-element-bg"></div>
+                <a href="#one-a">1A</a>
+            </div>
             <div class="nav-element nav-element-2">
                 <div class="nav-element-bg"></div>
                 <a href="#two">2</a>
@@ -510,6 +560,8 @@
     </nav>
 
 
+<!-- SLIDE ONE -->
+
     <div class="slide one" id="one">
         <h1>Roraty 2021</h1>
         <p class="date">Poniedziałek 29.11.2021</p>
@@ -525,11 +577,57 @@
             <img src="http://simpleicon.com/wp-content/uploads/candle-2.svg" alt="Świeca adwentowa">
         </div>
 
+        <div class="arrow arrow-down"><a href="#one-a"><i class="fas fa-angle-double-down"></i></a></div>
+    </div>
+
+<!-- SLIDE ONE-A -->
+
+    <div class="slide one-a" id="one-a">
+        <div class="arrow arrow-up"><a href="#one"><i class="fas fa-angle-double-up"></i></a></div>
+
+        <div class="slogan slogan-1">
+            <div class="first-letter">
+                <p>S</p>
+            </div>
+            <div class="call">
+                <p>zybiej</p>
+            </div>
+            <div class="description">
+                <p>&nbsp;zdobywać świętość</p>
+            </div>
+        </div>
+
+        <div class="slogan slogan-2">
+            <div class="first-letter">
+                <p>W</p>
+            </div>
+            <div class="call">
+                <p>yżej</p>
+            </div>
+            <div class="description">
+                <p>&nbsp;wznosić się nad niepowodzenia i porażki</p>
+            </div>
+        </div>
+
+        <div class="slogan slogan-3">
+            <div class="first-letter">
+                <p>S</p>
+            </div>
+            <div class="call">
+                <p>ilniej</p>
+            </div>
+            <div class="description">
+                <p>&nbsp;mocować się z samym sobą</p>
+            </div>
+        </div>
+
         <div class="arrow arrow-down"><a href="#two"><i class="fas fa-angle-double-down"></i></a></div>
     </div>
 
+<!-- SLIDE TWO -->
+
     <div class="slide two" id="two">
-        <div class="arrow arrow-up"><a href="#one"><i class="fas fa-angle-double-up"></i></a></div>
+        <div class="arrow arrow-up"><a href="#one-a"><i class="fas fa-angle-double-up"></i></a></div>
 
         <div class="quote">
             <h2>Iz 2, 1-5</h2>
@@ -539,6 +637,7 @@
         <div class="arrow arrow-down"><a href="#three"><i class="fas fa-angle-double-down"></i></a></div>
     </div>
     
+<!-- SLIDE THREE -->
     
     <div class="slide three" id="three">
         <div class="arrow arrow-up"><a href="#two"><i class="fas fa-angle-double-up"></i></a></div>
@@ -557,9 +656,7 @@
         <div class="arrow arrow-down"><a href="#four"><i class="fas fa-angle-double-down"></i></a></div>
     </div>
     
-    
-    
-
+<!-- SLIDE FOUR -->
 
     <div class="slide four" id="four">
         <div class="arrow arrow-up"><a href="#three"><i class="fas fa-angle-double-up"></i></a></div>
@@ -642,6 +739,7 @@
         <div class="arrow arrow-down"><a href="#five"><i class="fas fa-angle-double-down"></i></a></div>
     </div>
     
+<!-- SLIDE FIVE -->
     
     <div class="slide five" id="five">
         <div class="arrow arrow-up"><a href="#four"><i class="fas fa-angle-double-up"></i></a></div>
