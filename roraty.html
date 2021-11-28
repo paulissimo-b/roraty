@@ -261,6 +261,109 @@
 
         /* SLIDE FOUR */
 
+        .four {
+            align-items: center;
+        }
+
+        .bookmarks {
+            position: absolute;
+            left: 10px;
+            position: absolute;
+            height: 100vh;
+        }
+
+        .bookmark {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            top: 50%;
+        }
+
+        .song-number {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            background-color: rgb(224, 190, 238);
+            }
+
+        .song-number-bg {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #fff;
+            clip-path: circle(0 at 40% 40%);
+            z-index: 0;
+            transition: clip-path .3s;
+        }
+
+        .song-number p {
+            z-index: 1;
+        }
+        
+        .bookmark:hover > .song-name {
+            width: 350px;
+        }
+
+        .bookmark:hover > .song-number > .song-number-bg {
+            clip-path: circle(110% at 0 30%);
+        }
+        
+        .song-name {
+            position: relative;
+            margin-left: 5px;
+            overflow: hidden;
+            width: 0;
+            height: 40px;
+            background-color: #fff;
+            transition: width .3s;
+      }
+
+      .song-name p {
+          position: absolute;
+          left: 20px;
+          line-height: 40px;
+          white-space: nowrap;
+      }
+
+      .lyrics {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          width: 90%;
+          height: 85%;
+          overflow: hidden;
+          /* border: 1px solid red; */
+      }
+
+      .lyrics p {
+        font-size: 5rem;
+        color: #fff;
+      }
+
+      .select-stanza {
+          display: none;
+          position: absolute;
+          bottom: 7vh;
+      }
+
+      .select-stanza p {
+          margin: 0 5px;
+          padding: 0 10px;
+          font-size: 2rem;
+          color: #fff;
+          cursor: pointer; 
+      }
+
+      .select-stanza p:hover {
+          text-decoration: underline;
+      }
 
         /* SLIDE FIVE */
 
@@ -460,6 +563,74 @@
 
     <div class="slide four" id="four">
         <div class="arrow arrow-up"><a href="#three"><i class="fas fa-angle-double-up"></i></a></div>
+
+
+        <div class="bookmarks">
+
+            <div class="bookmark bookmark-1">
+                <div class="song-number song-1">
+                    <div class="song-number-bg"></div>
+                    <p>1</p>
+                </div>
+                <div class="song-name">
+                    <p>Ci co zaufali Panu</p>
+                </div>
+            </div>
+            
+            <div class="bookmark bookmark-2">
+                <div class="song-number song-2">
+                    <div class="song-number-bg"></div>
+                    <p>2</p>
+                </div>
+                <div class="song-name">
+                    <p>Jezus siłą mą</p>
+                </div>
+            </div>
+            
+            <div class="bookmark bookmark-3">
+                <div class="song-number song-3">
+                    <div class="song-number-bg"></div>
+                    <p>3</p>
+                </div>
+                <div class="song-name">
+                    <p>Ole, ole, ole</p>
+                </div>
+            </div>
+            
+            <div class="bookmark bookmark-4">
+                <div class="song-number song-4">
+                    <div class="song-number-bg"></div>
+                    <p>4</p>
+                </div>
+                <div class="song-name">
+                    <p>Józefie stajenki nie szukaj</p>
+                </div>
+            </div>
+            
+            <div class="bookmark bookmark-5">
+                <div class="song-number song-5">
+                    <div class="song-number-bg"></div>
+                    <p>5</p>
+                </div>
+                <div class="song-name">
+                    <p>Gdy adwentowy wieczór nadchodzi</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="lyrics song-stanza" id="lyrics">
+            <p></p>
+            <div class="select-stanza stanza-1">
+                <p id="s2-1">1</p>
+                <p id="s2-r">Ref</p>
+                <p id="s2-2">2</p>
+            </div>
+            <div class="select-stanza stanza-2">
+                <p id="s5-1">1</p>
+                <p id="s5-r">Ref</p>
+            </div>
+        </div>
 
         <div class="arrow arrow-down"><a href="#five"><i class="fas fa-angle-double-down"></i></a></div>
     </div>
