@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roraty - 30.11.2021</title>
+    <title>Roraty - 07.12.2021</title>
     <link rel="stylesheet" href="./fontawesome-free-6.0.0-beta2-web/css/all.css">
-    <script src="https://kit.fontawesome.com/9773a0b441.js" crossorigin="anonymous"></script> 
+    <script src="https://kit.fontawesome.com/9773a0b441.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
@@ -17,10 +19,10 @@
             padding: 0;
             scroll-behavior: smooth;
         }
-        
+
         body {
-            font-family: Montserrat, sans-serif; 
-            overflow: hidden;         
+            font-family: Montserrat, sans-serif;
+            overflow: hidden;
         }
 
         -webkit-scrollbar {
@@ -36,7 +38,7 @@
             padding: 10px 0;
             z-index: 2;
         }
-        
+
         .nav-open {
             display: flex;
             align-items: center;
@@ -49,14 +51,14 @@
             transition: padding .2s linear;
         }
 
-        nav:hover > .nav-bar {
+        nav:hover>.nav-bar {
             width: 260px;
         }
 
-        nav:hover > .nav-open {
+        nav:hover>.nav-open {
             padding: 0 10px;
         }
-        
+
         .nav-element {
             position: absolute;
             display: inline-flex;
@@ -83,19 +85,19 @@
             clip-path: circle(0 at 40% 40%);
             transition: clip-path .3s ease-in;
         }
-        
+
         .nav-element:hover .nav-element-bg {
             clip-path: circle(110% at 0 30%);
         }
-        
+
         .nav-element:hover a {
             color: #fff;
         }
-        
+
         .nav-element a {
             padding: 10px 15px;
         }
-        
+
 
         nav:hover .nav-bar .nav-element-1 {
             left: 35px;
@@ -104,7 +106,7 @@
         nav:hover .nav-bar .nav-element-1a {
             left: 85px;
         }
-        
+
         nav:hover .nav-bar .nav-element-2 {
             left: 135px;
         }
@@ -112,7 +114,7 @@
         nav:hover .nav-bar .nav-element-3 {
             left: 185px;
         }
-        
+
         nav:hover .nav-bar .nav-element-4 {
             left: 235px;
         }
@@ -120,7 +122,7 @@
         nav:hover .nav-bar .nav-element-5 {
             left: 285px;
         }
-        
+
         /* ALL SLIDES */
 
         .slide {
@@ -153,7 +155,7 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            background-image: linear-gradient(175deg,  rgb(163, 40, 211) , rgb(137, 46, 155) 80%, rgb(64, 0, 77) 80%);
+            background-image: linear-gradient(175deg, rgb(163, 40, 211), rgb(137, 46, 155) 80%, rgb(64, 0, 77) 80%);
             color: #fff;
         }
 
@@ -167,7 +169,7 @@
             font-size: 4rem;
         }
 
-        
+
         .candles {
             margin-top: 50px;
             position: relative;
@@ -176,14 +178,15 @@
             height: 200px;
             /* width: 20vw; */
         }
-        
+
         .candles img {
             filter: invert(100%) sepia(0%) saturate(7479%) hue-rotate(70deg) brightness(99%) contrast(107%);
             opacity: .1;
             height: 100%;
         }
 
-        .candles img:nth-child(1) {
+        .candles img:nth-child(1),
+        .candles img:nth-child(2) {
             opacity: 1;
         }
 
@@ -229,11 +232,11 @@
             transition: width .3s ease-out;
         }
 
-          /* SLIDE TWO */
-        
+        /* SLIDE TWO */
+
         .two {
             align-items: center;
-            background-image: linear-gradient(70deg, rgb(163, 40, 211) 40%,  rgb(137, 46, 155)40%,  rgb(163, 40, 211));
+            background-image: linear-gradient(70deg, rgb(163, 40, 211) 40%, rgb(137, 46, 155)40%, rgb(163, 40, 211));
         }
 
         /* SLIDE THREE */
@@ -245,7 +248,7 @@
             justify-content: space-evenly;
             background-image: radial-gradient(circle at 20% -30%, rgb(137, 46, 155) 70%, rgb(163, 40, 211) 70%);
         }
-        
+
         .img-box {
             position: relative;
             perspective: 300px;
@@ -279,7 +282,7 @@
         .show-video:hover {
             opacity: .9;
         }
-        
+
         .video-box {
             position: absolute;
             width: 70%;
@@ -287,8 +290,8 @@
             /* box-shadow: 0 0 600px 150px #000;  */
         }
 
-        .video-box iframe
-        ,.video-box video {
+        .video-box iframe,
+        .video-box video {
             width: 100%;
             height: 100%;
         }
@@ -338,7 +341,7 @@
             border-radius: 50%;
             cursor: pointer;
             background-color: rgb(224, 190, 238);
-            }
+        }
 
         .song-number-bg {
             position: absolute;
@@ -354,15 +357,15 @@
         .song-number p {
             z-index: 1;
         }
-        
-        .bookmark:hover > .song-name {
+
+        .bookmark:hover>.song-name {
             width: 350px;
         }
 
-        .bookmark:hover > .song-number > .song-number-bg {
+        .bookmark:hover>.song-number>.song-number-bg {
             clip-path: circle(110% at 0 30%);
         }
-        
+
         .song-name {
             position: relative;
             margin-left: 5px;
@@ -371,49 +374,49 @@
             height: 40px;
             background-color: #fff;
             transition: width .3s;
-      }
+        }
 
-      .song-name p {
-          position: absolute;
-          left: 20px;
-          line-height: 40px;
-          white-space: nowrap;
-      }
+        .song-name p {
+            position: absolute;
+            left: 20px;
+            line-height: 40px;
+            white-space: nowrap;
+        }
 
-      .lyrics {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          width: 90%;
-          height: 90%;
-          overflow: hidden;
-          /* border: 1px solid red; */
-      }
+        .lyrics {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 90%;
+            height: 90%;
+            overflow: hidden;
+            /* border: 1px solid red; */
+        }
 
-      .lyrics p {
-        font-size: 4rem;
-        color: #fff;
-      }
+        .lyrics p {
+            font-size: 4rem;
+            color: #fff;
+        }
 
-      .select-stanza {
-          display: none;
-          position: absolute;
-          left: 20vw;
-          bottom: 1vh;
-      }
+        .select-stanza {
+            display: none;
+            position: absolute;
+            left: 20vw;
+            bottom: 1vh;
+        }
 
-      .select-stanza p {
-          margin: 0 5px;
-          padding: 0 10px;
-          font-size: 2rem;
-          color: #fff;
-          cursor: pointer; 
-      }
+        .select-stanza p {
+            margin: 0 5px;
+            padding: 0 10px;
+            font-size: 2rem;
+            color: #fff;
+            cursor: pointer;
+        }
 
-      .select-stanza p:hover {
-          text-decoration: underline;
-      }
+        .select-stanza p:hover {
+            text-decoration: underline;
+        }
 
         /* SLIDE FIVE */
 
@@ -421,7 +424,7 @@
             padding-top: 60px;
             background-color: rgb(163, 40, 211);
         }
-        
+
         .question-box {
             position: relative;
             display: flex;
@@ -432,7 +435,7 @@
         .question-box i {
             position: absolute;
             font-size: 50rem;
-            color: rgba(255,255,255,.5);
+            color: rgba(255, 255, 255, .5);
             transform: rotate(-20deg) skew(20deg);
         }
 
@@ -446,12 +449,12 @@
             left: 25%;
             top: 0%;
         }
-        
+
         .question-text p {
             width: 80%;
         }
-        
-        
+
+
 
         /* ARROWS */
 
@@ -459,15 +462,15 @@
             position: absolute;
             font-size: 1.5rem;
         }
-        
+
         .arrow-down {
             bottom: 20px;
         }
-        
+
         .arrow-up {
-            top: 20px;    
+            top: 20px;
         }
-        
+
         .arrow-down:hover {
             animation: arrow-down-move 1s linear infinite;
         }
@@ -483,7 +486,7 @@
 
         @keyframes arrow-down-move {
             0% {
-                bottom:20px;
+                bottom: 20px;
             }
 
             25% {
@@ -505,7 +508,7 @@
 
         @keyframes arrow-up-move {
             0% {
-                top:20px;
+                top: 20px;
             }
 
             25% {
@@ -524,12 +527,12 @@
                 top: 20px;
             }
         }
-
     </style>
 </head>
+
 <body>
-    
-    
+
+
     <nav>
         <div class="nav-open">
             <i class="fas fa-angle-double-right"></i>
@@ -563,11 +566,11 @@
     </nav>
 
 
-<!-- SLIDE ONE -->
+    <!-- SLIDE ONE -->
 
     <div class="slide one" id="one">
         <h1>Roraty 2021</h1>
-        <p class="date">Wtorek 30.11.2021</p>
+        <p class="date">Wtorek 07.12.2021</p>
 
         <div class="candles">
             <!-- <img src="./img/candle.svg" alt="Świeca adwentowa">
@@ -583,7 +586,7 @@
         <div class="arrow arrow-down"><a href="#one-a"><i class="fas fa-angle-double-down"></i></a></div>
     </div>
 
-<!-- SLIDE ONE-A -->
+    <!-- SLIDE ONE-A -->
 
     <div class="slide one-a" id="one-a">
         <div class="arrow arrow-up"><a href="#one"><i class="fas fa-angle-double-up"></i></a></div>
@@ -627,39 +630,40 @@
         <div class="arrow arrow-down"><a href="#two"><i class="fas fa-angle-double-down"></i></a></div>
     </div>
 
-<!-- SLIDE TWO -->
+    <!-- SLIDE TWO -->
 
     <div class="slide two" id="two">
         <div class="arrow arrow-up"><a href="#one-a"><i class="fas fa-angle-double-up"></i></a></div>
 
         <div class="quote">
-            <h2>Iz 11, 1-10</h2>
-            <p>"Nie będzie sądził z pozorów ni wyrokował według pogłosek; raczej rozsądzi biednych sprawiedliwie i pokornym w kraju wyda słuszny wyrok"</p>
+            <h2>Iz 40, 1-11</h2>
+            <p>"&laquo;Pocieszajcie, pocieszajcie mój lud!&raquo; - mówi Wasz Bóg. &laquo;Przemawiajcie do serca Jeruzalem i wołjacie do niego, że czas jego służby się skończył, że nieprawość jego odpokutowana (...)&raquo;"</p>
         </div>
 
         <div class="arrow arrow-down"><a href="#three"><i class="fas fa-angle-double-down"></i></a></div>
     </div>
-    
-<!-- SLIDE THREE -->
-    
+
+    <!-- SLIDE THREE -->
+
     <div class="slide three" id="three">
         <div class="arrow arrow-up"><a href="#two"><i class="fas fa-angle-double-up"></i></a></div>
         <div class="img-box">
-            <img src="./img/j-jedrzejczyk_small.jpg" alt="Joanna Jędrzejczyk" id="sportsman-img" style="filter: blur(20px)">
+            <img src="./img/p-wyszomirski_small.jpg" alt="Piotr Wyszomirski" id="sportsman-img"
+                style="filter: blur(20px)">
         </div>
         <div class="quote">
-            <p>"Pan jest moją siłą i tarczą, moje serce Jemu zaufało i doznałam pomocy, dlatego moje serce się rozweseliło i moją pieśnią będę Go chwalić"<br><span class="i">Ps. 28, 7</span></p>
+            <p>"Kładę przed Wami życie i śmierć, błogosławieństwo i przekleństwo"<br><span class="i">por. Pwt 30, 15</span></p>
         </div>
         <div class="video-box">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/AS86-evYIIs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/s3iB9ZfF2Nk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <!-- <video controls src="./video/Dawid Tomala - Adwent MPK.mp4"></video> -->
             <p><i class="far fa-window-close"></i></p>
         </div>
         <p class="show-video"><i class="fas fa-film"></i></p>
         <div class="arrow arrow-down"><a href="#four"><i class="fas fa-angle-double-down"></i></a></div>
     </div>
-    
-<!-- SLIDE FOUR -->
+
+    <!-- SLIDE FOUR -->
 
     <div class="slide four" id="four">
         <div class="arrow arrow-up"><a href="#three"><i class="fas fa-angle-double-up"></i></a></div>
@@ -676,7 +680,7 @@
                     <p>Ci co zaufali Panu</p>
                 </div>
             </div>
-            
+
             <div class="bookmark bookmark-2">
                 <div class="song-number song-2">
                     <div class="song-number-bg"></div>
@@ -686,7 +690,7 @@
                     <p>Jezus siłą mą</p>
                 </div>
             </div>
-            
+
             <div class="bookmark bookmark-3">
                 <div class="song-number song-3">
                     <div class="song-number-bg"></div>
@@ -696,7 +700,7 @@
                     <p>Ole, ole, ole, ole!</p>
                 </div>
             </div>
-            
+
             <div class="bookmark bookmark-4">
                 <div class="song-number song-4">
                     <div class="song-number-bg"></div>
@@ -706,7 +710,7 @@
                     <p>Józefie stajenki nie szukaj</p>
                 </div>
             </div>
-            
+
             <div class="bookmark bookmark-5">
                 <div class="song-number song-5">
                     <div class="song-number-bg"></div>
@@ -716,7 +720,7 @@
                     <p>Gdy adwentowy wieczór nadchodzi</p>
                 </div>
             </div>
-            
+
             <div class="bookmark bookmark-X">
                 <div class="song-number song-X">
                     <div class="song-number-bg"></div>
@@ -745,9 +749,9 @@
 
         <div class="arrow arrow-down"><a href="#five"><i class="fas fa-angle-double-down"></i></a></div>
     </div>
-    
-<!-- SLIDE FIVE -->
-    
+
+    <!-- SLIDE FIVE -->
+
     <div class="slide five" id="five">
         <div class="arrow arrow-up"><a href="#four"><i class="fas fa-angle-double-up"></i></a></div>
         <div class="question-box">
@@ -760,4 +764,5 @@
 
     <script src="./js/roraty.js"></script>
 </body>
+
 </html>
